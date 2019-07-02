@@ -6,6 +6,7 @@ const app = express();
 
 const PORT = process.env.PORT || 5000;
 
+const path = require(“path”); app.use(express.static(path.join(__dirname, “client/build”)))
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(require('cors')());
