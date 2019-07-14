@@ -19,3 +19,5 @@ app.use('/api/users', require('./routes/users'));
 
   app.get('*', (req, res) => {
     res.sendfile(path.resolve(__dirname, 'client', 'build', 'index.html'));
+    
+ app.listen(PORT, () => console.log(`App running on port ${PORT}`)  );
